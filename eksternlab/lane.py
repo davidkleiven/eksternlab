@@ -5,7 +5,8 @@ from scipy.interpolate import interp1d
 
 class Lane(object):
     """
-    Utility class for extracting useful properties of a lane.
+    Utility class for extracting useful properties of a lane. It is assumed
+    that there is a one-to-one mapping between the x- and y-coordinates.
 
     Parameters:
 
@@ -45,7 +46,7 @@ class Lane(object):
 
     def slope(self, smooth=5):
         """
-        Returns an interpolator for the slope angle of the lane
+        Returns an interpolator for the slope angle (in radians) of the lane
 
         Parameters:
 
@@ -65,9 +66,9 @@ class Lane(object):
 
     def radius_of_curvature(self, smooth=5):
         """
-        Returns the radius of curvatur
+        Returns the radius of curvature
 
-        Parameters
+        Parameters:
 
         smooth: int
             Window length in Savgol filter. Has to be odd.
