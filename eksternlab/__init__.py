@@ -1,1 +1,1 @@
-from eksternlab.line_profile import Lane
+from eksternlab.lane import Lane
