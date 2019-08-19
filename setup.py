@@ -5,6 +5,7 @@ setup(
     description='Useful scripts for NTNU lab for engineers',
     version=1.0,
     author='David Kleiven',
+    url='https://github.com/davidkleiven/eksternlab',
     author_email='david.kleiven@ntnu.no',
     packages=find_packages(),
     classifiers=[
