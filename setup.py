@@ -6,7 +6,7 @@ setup(
     version=1.0,
     author='David Kleiven',
     url='https://github.com/davidkleiven/eksternlab',
-    download_url='https://github.com/davidkleiven/eksternlab',
+    download_url='https://github.com/davidkleiven/eksternlab/archive/v1.0.tar.gz',
     author_email='david.kleiven@ntnu.no',
     packages=find_packages(),
     classifiers=[
