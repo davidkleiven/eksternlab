@@ -10,9 +10,7 @@ setup(
     author_email='david.kleiven@ntnu.no',
     packages=find_packages(),
     classifiers=[
-        'Development Stats :: 4 - Beta',
-        'Intended Audience :: Students',
-        'Topic :: Data analysis :: Post processing Tools',
+        'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
