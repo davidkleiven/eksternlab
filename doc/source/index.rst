@@ -6,6 +6,15 @@
 Dokumentasjon for programvare for eksternlab!
 =============================================
 
+Installasjon
+-------------
+Pakken med dataanalyse programmer kan installeres via *pip*
+
+.. code-block:: bash
+
+    pip install eksternlab
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
