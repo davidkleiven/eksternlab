@@ -20,6 +20,7 @@ def height(x, y):
     >>> h = height(x, y)
 
     To get the height at an arbitrary position x
+    
     >>> x1 = 0.23
     >>> y1 = h(x1)
     """

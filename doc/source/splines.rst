@@ -24,18 +24,18 @@ Videre benytter vi funksjonen *height* til å tilbasse splinen
 >>> import numpy as np
 >>> h = height(x, y)
 
-For å evaluere høyden i for et gitt antall koordinater kan vi 
+For å evaluere høyden for et gitt antall *x*-koordinater kan vi 
 
 >>> x_interp = np.linspace(0.0, 1.0, 50)
->>> y_interp = h(x)
+>>> y_interp = h(x_interp)
 
 Dersom vi ønsker å beregne hellningsvinkelen kan vi bruke funksjonen *slope*
 
 >>> from eksternlab import slope
 >>> alpha = slope(h, x_interp)
 
-Videre kan vi finne krumningen til banen, som er like den inverse
-krumingsradiusen som følger
+Videre kan vi finne krumningen til banen, som er lik den inverse
+krumingsradiusen, som følger
 
 >>> from eksternlab import curvature
 >>> kappa = curvature(h, x_interp)
