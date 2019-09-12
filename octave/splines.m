@@ -39,11 +39,39 @@ endfunction
 %%               KOPIER DISSE TIL FILA DU JOBBER MED                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function cs = height(x, y)
+  ## Funksjon for å tilpasse en kubisk spline til et sett med punkter
+  ## 
+  ## Parametre
+  ## x - array med horisontale koordinater
+  ## y - array med vertikale koordinater
+  ##
+  ## Eksempel
+  ## x = [0.0, 0.2, 0.3]
+  ## y = [1.0, 0.5, 1.0]
+  ## cs = height(x, y)
+  ##
+  ## For å evaluere splinetilpasningen i vilkårlige punkter
+  ## 
+  ## x_interp = linspace(0.0, 0.3, 10)
+  ## y_interp = ppval(cs, x_interp)
+  
     cs = interp1(x, y, 'spline', 'pp');
 endfunction
 
 
 function alpha = slope(cs, x)
+  ## Funksjon for å evaluere hellningsvinkelen i et sett med punkter
+  ##
+  ## Parametre
+  ## cs - Stykkevis polynom (f.eks. det som returneres fra height)
+  ## x - array med punkter for hvor hellningsvinkelen skal evaluers
+  ##
+  ## Eksempel
+  ## x = [0.0, 0.2, 0.3]
+  ## y = [1.0, 0.5, 1.0]
+  ## cs = height(x, y)
+  ## x_interp = linspace(0.0, 0.3, 10)
+  ## alpha = slope(cs, x_interp) 
     dydx = ppder(cs);
     y = ppval(dydx, x);
     alpha = -atan(y);
@@ -51,6 +79,18 @@ endfunction
 
 
 function kappa = curvature(cs, x)
+  ## Funksjon for å beregne krumingen til banen
+  ##
+  ## Parametre
+  ## cs - Stykkevis polynom (f.eks. det som returneres fra height)
+  ## x - array med verdier hvor krumningen skal evalueres
+  ## Eksempel
+  ## x = [0.0, 0.2, 0.3]
+  ## y = [1.0, 0.5, 1.0]
+  ## cs = height(x, y)
+  ## x_interp = linspace(0.0, 0.3, 10)
+  ## kappa = curvature(cs, x_interp) 
+  
     dydx = ppder(cs);
     dy2dx2 = ppder(dydx);
     dydx_sq = ppval(dydx, x).^2;
