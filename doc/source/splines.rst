@@ -9,7 +9,7 @@ Kubiske spliner
 
 For å kunne løse Newtons ligninger for et rullende objekt på en vilkårlig bane,
 trenger vi en matematisk beskrivelse av banen. Dvs. vi må kunne vite høyden til 
-banen for vilkårlig horisontal posisjon. Her gjør vi dette ved å spesifisere *x* og
+banen for en vilkårlig horisontal posisjon. Her gjør vi dette ved å spesifisere *x* og
 *y*-koordinatene til et sett med punkter som vi vet at banen går gjennom. Videre
 tilpasser vi såkalte *kubiske spliner* til disse punktene. La oss lagre de 
 kjente punktene i to lister
