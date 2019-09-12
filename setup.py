@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 setup(
     name='eksternlab',
     description='Useful scripts for NTNU lab for engineers',
-    version=1.0,
+    version=1.2,
     author='David Kleiven',
     url='https://github.com/davidkleiven/eksternlab',
-    download_url='https://github.com/davidkleiven/eksternlab/archive/v1.0.tar.gz',
+    download_url='https://github.com/davidkleiven/eksternlab/archive/v1.2.tar.gz',
     author_email='david.kleiven@ntnu.no',
     packages=find_packages(),
     classifiers=[
@@ -17,5 +17,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 2.7'
-    ]
+    ],
+    install_requires=['numpy', 'scipy']
 )

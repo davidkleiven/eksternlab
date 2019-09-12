@@ -20,6 +20,7 @@ Pakken med dataanalyse programmer kan installeres via *pip*
    :caption: Contents:
 
    lane
+   splines
 
 
 Indices and tables
