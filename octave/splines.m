@@ -32,7 +32,7 @@ function splines()
     ylabel("Krumning $cm^{-1}$")
    
     
-endfunction
+end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                     NYTTIGE FUNKSJONER                            %%
@@ -56,7 +56,7 @@ function cs = height(x, y)
   %% y_interp = ppval(cs, x_interp)
   
     cs = interp1(x, y, 'spline', 'pp');
-endfunction
+end
 
 
 function alpha = slope(cs, x)
@@ -72,10 +72,10 @@ function alpha = slope(cs, x)
   %% cs = height(x, y)
   %% x_interp = linspace(0.0, 0.3, 10)
   %% alpha = slope(cs, x_interp) 
-    dydx = ppder(cs);
+    dydx = fnder(cs, 1);
     y = ppval(dydx, x);
     alpha = -atan(y);
-endfunction
+end
 
 
 function kappa = curvature(cs, x)
@@ -91,10 +91,10 @@ function kappa = curvature(cs, x)
   %% x_interp = linspace(0.0, 0.3, 10)
   %% kappa = curvature(cs, x_interp) 
   
-    dydx = ppder(cs);
-    dy2dx2 = ppder(dydx);
+    dydx = fnder(cs, 1);
+    dy2dx2 = fnder(dydx, 2);
     dydx_sq = ppval(dydx, x).^2;
     kappa = ppval(dy2dx2, x)./((1.0 + dydx_sq).^1.5);
-endfunction
+end
 
 
